@@ -75,7 +75,7 @@ img {
     margin-right: -5px;
 }
 
-.running-line-inner {
+.running-line-inner{
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -91,17 +91,16 @@ img {
 }
 
 .grey-back {
-    background-color: #e4e5e6;
+    background-color: #e4e5e6;;
     transform: rotate(2deg);
 }
-
-.running-line-text {
+.running-line-text{
     flex-shrink: 0;
     margin: 0;
     padding: 10px 15px;
     min-width: 100%;
     white-space: nowrap;
-    animation-name: runningLine;
+    animation-name: running-LineX;
     animation-duration: 15s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
@@ -111,11 +110,15 @@ img {
     line-height: 1.25;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: #292929;
     display: flex;
     gap: 16px;
     align-items: center;
-
+}
+.green {
+    color: #292929;
+}
+.grey{
+     color: #00b068;
 }
 
 .dot-green::before {
@@ -175,13 +178,7 @@ img {
 }
 
 
-.grey-back {
-    color: #00b068;
-}
-
-.black-magic::before {}
-
-@keyframes runningLine {
+@keyframes running-LineX {
     from {
         transform: translateX(0);
     }
