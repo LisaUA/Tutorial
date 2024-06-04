@@ -63,7 +63,7 @@ img {
     overflow: hidden;
 }
 
-.running-line {
+.running {
     overflow: hidden;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
@@ -71,11 +71,12 @@ img {
     line-height: 1.25;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    /* background-color: #FFF; */
     height: 245px;
     margin-right: -5px;
 }
 
-.running-line-inner{
+.running__inner {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -86,21 +87,22 @@ img {
 
 }
 
-.green-back {
+.green-cube {
     background-color: #bcdfd1;
 }
 
-.grey-back {
-    background-color: #e4e5e6;;
+.black-cube {
+    background-color: #e4e5e6;
     transform: rotate(2deg);
 }
-.running-line-text{
+
+.running__line {
     flex-shrink: 0;
     margin: 0;
     padding: 10px 15px;
     min-width: 100%;
     white-space: nowrap;
-    animation-name: running-LineX;
+    animation-name: runningLine;
     animation-duration: 15s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
@@ -110,18 +112,14 @@ img {
     line-height: 1.25;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    color: #292929;
     display: flex;
     gap: 16px;
     align-items: center;
-}
-.green {
-    color: #292929;
-}
-.grey{
-     color: #00b068;
+
 }
 
-.dot-green::before {
+.green-dot::before {
     content: "";
     background-color: #00b068;
     width: 8px;
@@ -132,7 +130,7 @@ img {
     display: inline-block;
 }
 
-.dot-black::before {
+.black-dot::before {
     content: "";
     background-color: #292929;
     width: 8px;
@@ -166,19 +164,13 @@ img {
     display: inline-block;
 }
 
-.first-cube-elem {
-    content: "";
-    background-color: #00b068;
-    width: 8px;
-    height: 8px;
-    margin: 8px;
-    border-radius: 2px;
-    transform: rotate(-180deg);
-    display: inline-block;
+.color-mode {
+    color: #00b068;
 }
 
 
-@keyframes running-LineX {
+
+@keyframes runningLine {
     from {
         transform: translateX(0);
     }
@@ -194,7 +186,7 @@ img {
         margin-bottom: 124px;
     }
 
-    .running-line {
+    .running__inner {
         padding: 40px 0px;
         height: 128px;
     }
